@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 9: ¡Probar TODO! - Corrección Final</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        details > summary {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 0px; /* Reduced margin */
+            font-weight: bold;
+            list-style: none; /* Hide default arrow */
+            position: relative;
+            outline: none;
+            border-radius: 5px 5px 0 0; /* Rounded top corners */
+        }
+        details > summary::-webkit-details-marker { display: none; } /* Hide default arrow for Chrome/Safari */
+        details > summary::before { /* Custom Arrow */
+            content: '▶';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9em; /* Slightly larger arrow */
+            transition: transform 0.2s;
+        }
+        details[open] > summary::before { /* Custom Arrow when open */
+            transform: translateY(-50%) rotate(90deg);
+        }
+        details .content { /* Content visible by default inside details */
+             display: block;
+             padding: 15px; /* More padding */
+             border: 1px solid #ddd;
+             border-top: none; /* Avoid double border with summary */
+             margin-bottom: 10px;
+             border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px; /* Add some space above the table */
+        }
+        th, td {
+            padding: 12px; /* Slightly more padding */
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top; /* Ensure content aligns at the top */
+        }
+        th {
+            background-color: #f8f8f8; /* Lighter grey background for headers */
+            font-weight: bold;
+        }
+        /* Style for the 'Action' column */
+        td:first-child {
+            width: 50%;
+        }
+        /* Style for the 'Dialogue' column */
+        td:last-child {
+            width: 50%;
+        }
+        /* Making facilitator instructions clearer */
+        td em, td i { /* Style for italicized facilitator notes */
+            color: #555;
+            font-style: italic;
+            display: block; /* Put notes on new lines */
+            margin-top: 5px;
+        }
+        /* Ensure step <strong> tags render bold */
+        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+
+
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+        ul, ol {
+            margin-top: 5px; /* Adjust spacing for lists */
+            margin-bottom: 10px;
+            padding-left: 25px; /* Indent lists slightly more */
+        }
+        li {
+            margin-bottom: 8px; /* More space between list items */
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555; font-weight: bold;}
+         hr { border: none; border-top: 1px solid #eee; margin: 8px 0; } /* Subtle separator */
+         .subtitle { font-size: 0.9em; color: #e0e0e0; margin-top: 5px;} /* Subtitle style from example */
+    </style>
+    <script>
+        // Basic script to ensure details elements work consistently if needed,
+        // but modern browsers handle <details> natively.
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 9: ¡Probar TODO! - Corrección Final</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <details id="activity-0" class="activity" open> <!-- Open by default -->
+            <summary>📝 Resumen de Sesión</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Probar exhaustivamente TODO el proyecto: flujo principal (Inicio -> Clics -> Escenas Mejor/Peor) Y la interacción extra añadida en la Escena Mejor.</li>
+                                <li>Identificar y corregir los últimos errores o inconsistencias restantes.</li>
+                                <li>Asegurar que la experiencia completa sea fluida, coherente y funcional.</li>
+                                <li>Preparar el proyecto para una posible revisión final o entrega.</li>
+                            </ul>
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong> Proyecto Scratch Jr. completamente probado (flujo principal + interacción extra) con los errores finales corregidos, listo para revisión/entrega.
+                            <br><br>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                            <br><br>
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Dispositivos con Scratch Jr. y el proyecto guardado de la Sesión 8 (con la interacción extra programada).</li>
+                                <li>Tablero Kanban con el estado actualizado.</li>
+                                <li>Tarjetas de tarea "Probar TODO" y "Corregir Errores Finales" (pueden ser las mismas de S6 renombradas o nuevas).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 1: Stand-up Final de Pruebas -->
+        <details id="activity-1" class="activity">
+            <summary>🏁 Actividad 1: Stand-up Final de Pruebas ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (3 min): Objetivo - Probar TODO</strong>
+                            <br>Reunir a los equipos con su proyecto abierto.
+                            <br>Recordar brevemente la interacción extra programada la sesión anterior.
+                            <br>Enfatizar que hoy se prueba el flujo completo MÁS la interacción extra.
+                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Iconos: Checklist grande ✅, Lupa 🔍, Personaje corriendo 🏃‍♂️, y la Caja Regalo/Estrella ✨ representando la interacción extra).
+                        </td>
+                        <td>
+                            "¡Equipos, recta final! Hoy es la ¡GRAN PRUEBA FINAL!"
+                            <br><br>
+                            "La última vez le dimos vida a nuestra 'sorpresa extra', ¿recuerdan? <em>(Breve recordatorio)</em>."
+                            <br><br>
+                            "¡Hoy nuestra misión es PROBARLO TODO JUNTO! <em>(Mostrar Diapositiva 1)</em>. Vamos a jugar la aventura completa, desde el inicio hasta el final, y también probaremos la sorpresa extra. Queremos asegurarnos de que todo funciona perfectamente, ¡sin errores!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (2 min): Roles y Kanban</strong>
+                             <br>Confirmar roles, destacando al **Probador/a** como líder de la prueba final.
+                             <br>Asegurar que las tareas "Probar TODO" y "Corregir Errores Finales" estén listas en "Tareas por Hacer" en el Kanban.
+                        </td>
+                        <td>
+                            "¡Última revisión de roles! Probador/a, ¡guía esta prueba final con ojo de águila! Constructor/a, ¡listo/a para los últimos arreglos! Diseñador/a, ¡ayuda a verificar que todo siga el plan!"
+                            <br><br>
+                            "En nuestro Mapa Mágico (Kanban), tenemos las tareas 'Probar TODO' y 'Corregir Errores Finales'. ¡Hoy las llevaremos hasta el final!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 2: Ciclo Final de Pruebas y Corrección -->
+        <details id="activity-2" class="activity">
+            <summary>🛠️ Actividad 2: Ciclo Final de Pruebas y Corrección ⏰ Tiempo: 30 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (15 min): Pruebas Completas (Probador/a Lidera)</strong>
+                            <br>El **Probador/a** ejecuta TODO el flujo varias veces:
+                            <ul>
+                                <li>Inicio -> Clic Héroe -> Escena Mejor -> Probar Interacción Extra -> ¿Fin?</li>
+                                <li>Inicio -> Clic Villano -> Escena Peor -> ¿Fin?</li>
+                            </ul>
+                            <br>Verificar TODO: Clics principales, acción de la interacción extra, sonidos, movimientos, textos, apariencia visual general. ¿Algo se rompió al añadir la interacción extra? ¿Funciona todo junto?
+                            <br>Reportar CUALQUIER error, por pequeño que parezca.
+                            <br>Mover tarjeta "Probar TODO" a "¡Haciendo Ahora!".
+                        </td>
+                        <td>
+                            "¡Probadores, a jugar la aventura completa! ¡Varias veces!"
+                            <br><br>
+                            "Prueben ir por el camino del Héroe: ¿Llegan a la Escena Mejor? ¿Funciona la sorpresa extra que programamos? ¿Y después qué pasa?"
+                            <br><br>
+                            "Ahora, prueben ir por el camino del Villano: ¿Llegan a la Escena Peor? ¿Todo bien ahí?"
+                            <br><br>
+                            "¡Revisen TODO! ¿Los clics van bien? ¿La sorpresa funciona? ¿Se oyen los sonidos? ¿Se ve todo correcto? ¿Algo dejó de funcionar?"
+                            <br><br>
+                            "¡Reporten cualquier cosita rara al equipo!"
+                            <br><br>
+                            "¡Muevan 'Probar TODO' a '¡Haciendo Ahora!' en el Kanban!"
+                             <br>
+                            <em>(Facilitador observa las pruebas, asegurándose de que prueben ambos caminos y la interacción extra).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (13 min): Corrección de Errores Finales (Equipo Colabora)</strong>
+                            <br>El **Constructor/a** corrige los últimos bugs reportados, con el **Diseñador/a** ayudando a diagnosticar si es necesario.
+                            <br>Enfocarse en que la experiencia sea fluida y sin problemas evidentes. Pueden ser ajustes menores.
+                            <br><strong>Proyectar Diapositiva 2</strong> (Recordatorio visual del flujo Kanban: Probar -> Encontrar Error -> Corregir -> Volver a Probar -> Terminado).
+                            <br>Mover tarjeta "Corregir Errores Finales" a "¡Haciendo Ahora!" cuando se esté arreglando algo.
+                        </td>
+                        <td>
+                            "¡Equipo, si el Probador encontró un último detalle, ¡a corregirlo!"
+                            <br><br>
+                            "Constructor/a, ¡últimos ajustes! Revisa los bloques necesarios para arreglar el problema."
+                            <br><br>
+                            "Diseñador/a, ¡ayuda a pensar por qué ocurre el error!"
+                            <br><br>
+                            "Queremos que la aventura sea suave y divertida de jugar. ¡Arreglen esos últimos detalles!"
+                            <br><br>
+                            "Recuerden el ciclo en el Kanban: ¡Probar, encontrar, corregir, volver a probar! <em>(Mostrar Diapositiva 2)</em>."
+                            <br><br>
+                            "Muevan 'Corregir Errores Finales' a '¡Haciendo Ahora!' si están arreglando algo."
+                             <br>
+                            <em>(Facilitador apoya en los últimos diagnósticos y correcciones).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (2 min): Validación Final y Kanban</strong>
+                            <br>El **Probador/a** realiza una última prueba rápida del flujo completo después de las correcciones.
+                            <br>Si TODO funciona correctamente, mover las tarjetas "Probar TODO" y "Corregir Errores Finales" a "✅ ¡Terminado!".
+                        </td>
+                        <td>
+                            "¡Probador/a, la validación final! Juega una vez más la aventura completa."
+                            <br><br>
+                            "¿Todo funciona ahora? ¿Flujo principal y sorpresa extra?"
+                            <br><br>
+                            "Si la respuesta es ¡SÍ!... ¡Entonces hemos completado la misión de calidad! ¡Muevan las últimas tareas a '✅ ¡Terminado!' en el Kanban!"
+                             <br>
+                            <em>(Celebrar la finalización en el Kanban).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 3: Cierre y Preparación para Entrega -->
+        <details id="activity-3" class="activity">
+            <summary>✅ Actividad 3: Cierre y Preparación para Entrega ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (2 min): ¡Aventura Lista!</strong>
+                            <br>Felicitar efusivamente a los equipos por completar y probar su proyecto interactivo.
+                            <br>Resaltar el trabajo en equipo y la superación de desafíos (bugs).
+                        </td>
+                        <td>
+                            "¡EQUIPOS DE HÉROES! ¡LO HAN LOGRADO! ¡Su aventura interactiva ODS está completa, probada y funcionando!"
+                            <br><br>
+                            "Han trabajado increíblemente bien juntos, diseñando, construyendo, probando y arreglando. ¡Superaron todos los desafíos! ¡Estoy súper orgulloso de ustedes!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (2 min): Guardar Versión Final (¡Fundamental!)</strong>
+                            <br>Guiar EXPLICITAMENTE a los Constructores para guardar la versión final, final, FINAL del proyecto.
+                            <br>Quizás sugerir un nombre específico si aplica (ej. "EquipoRojo_Final").
+                            <br>Asegurarse de que TODOS guarden.
+                            <br><strong>Proyectar Diapositiva 3</strong> (Icono grande de Guardar + Trofeo 🏆 + Mensaje "¡GUARDA TU VERSIÓN FINAL!").
+                        </td>
+                        <td>
+                            "¡Ahora el guardado más importante de todos! ¡La versión FINAL!"
+                            <br><br>
+                            "Constructores, asegúrense de guardar el proyecto por última vez. ¡Esta es la versión que quedará lista! <em>(Mostrar Diapositiva 3)</em>."
+                             <br><br>
+                            <em>(Verificar con máxima atención que todos guarden correctamente).</em> "¿Confirmado? ¿Guardado final? ¡Excelente!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (1 min): Próximos Pasos (Entrega)</strong>
+                            <br>Anunciar brevemente cómo será la "entrega" (ej. dejar tablets en lugar designado, revisión posterior por el profesor, etc., según lo planeado para S10-S12).
+                        </td>
+                        <td>
+                            "¡Su aventura está lista!"
+                            <br><br>
+                            "En las próximas sesiones, nos prepararemos para la 'entrega' final, donde yo (el profe) podré ver sus increíbles creaciones."
+                            <br><br>
+                            "¡Han completado la parte más difícil! ¡Felicidades de nuevo! ¡Nos vemos pronto!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>

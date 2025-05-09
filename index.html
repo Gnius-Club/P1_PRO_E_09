@@ -74,7 +74,8 @@
             margin-top: 5px;
         }
         /* Ensure step <strong> tags render bold */
-        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+        td strong { font-weight: bold; } /* General strong for keywords */
+        td > strong { display: block; margin-bottom: 5px; } /* For step headers */
 
 
         span[style*="color: red;"] {
@@ -151,7 +152,7 @@
                             <br>Reunir a los equipos con su proyecto abierto.
                             <br>Recordar brevemente la interacción extra programada la sesión anterior.
                             <br>Enfatizar que hoy se prueba el flujo completo MÁS la interacción extra.
-                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Iconos: Checklist grande ✅, Lupa 🔍, Personaje corriendo 🏃‍♂️, y la Caja Regalo/Estrella ✨ representando la interacción extra).
+                            <br><strong>Proyectar Diapositiva 1</strong>.
                         </td>
                         <td>
                             "¡Equipos, recta final! Hoy es la ¡GRAN PRUEBA FINAL!"
@@ -164,7 +165,7 @@
                     <tr>
                         <td>
                             <strong>Paso 2 (2 min): Roles y Kanban</strong>
-                             <br>Confirmar roles, destacando al **Probador/a** como líder de la prueba final.
+                             <br>Confirmar roles, destacando al <strong>Probador/a</strong> como líder de la prueba final.
                              <br>Asegurar que las tareas "Probar TODO" y "Corregir Errores Finales" estén listas en "Tareas por Hacer" en el Kanban.
                         </td>
                         <td>
@@ -188,13 +189,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1 (15 min): Pruebas Completas (Probador/a Lidera)</strong>
-                            <br>El **Probador/a** ejecuta TODO el flujo varias veces:
-                            <ul>
-                                <li>Inicio -> Clic Héroe -> Escena Mejor -> Probar Interacción Extra -> ¿Fin?</li>
-                                <li>Inicio -> Clic Villano -> Escena Peor -> ¿Fin?</li>
-                            </ul>
-                            <br>Verificar TODO: Clics principales, acción de la interacción extra, sonidos, movimientos, textos, apariencia visual general. ¿Algo se rompió al añadir la interacción extra? ¿Funciona todo junto?
+                            <strong>Paso 1 (15 min): Pruebas Completas (<strong>Probador/a</strong> Lidera)</strong>
+                            <br>El <strong>Probador/a</strong> ejecuta TODO el flujo varias veces.
+                            <br>Verificar TODO: Clics principales, acción de la interacción extra, sonidos, movimientos, textos, apariencia visual general.
                             <br>Reportar CUALQUIER error, por pequeño que parezca.
                             <br>Mover tarjeta "Probar TODO" a "¡Haciendo Ahora!".
                         </td>
@@ -217,9 +214,9 @@
                     <tr>
                         <td>
                             <strong>Paso 2 (13 min): Corrección de Errores Finales (Equipo Colabora)</strong>
-                            <br>El **Constructor/a** corrige los últimos bugs reportados, con el **Diseñador/a** ayudando a diagnosticar si es necesario.
-                            <br>Enfocarse en que la experiencia sea fluida y sin problemas evidentes. Pueden ser ajustes menores.
-                            <br><strong>Proyectar Diapositiva 2</strong> (Recordatorio visual del flujo Kanban: Probar -> Encontrar Error -> Corregir -> Volver a Probar -> Terminado).
+                            <br>El <strong>Constructor/a</strong> corrige los últimos bugs reportados, con el <strong>Diseñador/a</strong> ayudando a diagnosticar si es necesario.
+                            <br>Enfocarse en que la experiencia sea fluida y sin problemas evidentes.
+                            <br><strong>Proyectar Diapositiva 2</strong>.
                             <br>Mover tarjeta "Corregir Errores Finales" a "¡Haciendo Ahora!" cuando se esté arreglando algo.
                         </td>
                         <td>
@@ -241,7 +238,7 @@
                      <tr>
                         <td>
                             <strong>Paso 3 (2 min): Validación Final y Kanban</strong>
-                            <br>El **Probador/a** realiza una última prueba rápida del flujo completo después de las correcciones.
+                            <br>El <strong>Probador/a</strong> realiza una última prueba rápida del flujo completo después de las correcciones.
                             <br>Si TODO funciona correctamente, mover las tarjetas "Probar TODO" y "Corregir Errores Finales" a "✅ ¡Terminado!".
                         </td>
                         <td>
@@ -271,7 +268,7 @@
                         <td>
                             <strong>Paso 1 (2 min): ¡Aventura Lista!</strong>
                             <br>Felicitar efusivamente a los equipos por completar y probar su proyecto interactivo.
-                            <br>Resaltar el trabajo en equipo y la superación de desafíos (bugs).
+                            <br>Resaltar el trabajo en equipo y la superación de desafíos.
                         </td>
                         <td>
                             "¡EQUIPOS DE HÉROES! ¡LO HAN LOGRADO! ¡Su aventura interactiva ODS está completa, probada y funcionando!"
@@ -283,9 +280,8 @@
                         <td>
                             <strong>Paso 2 (2 min): Guardar Versión Final (¡Fundamental!)</strong>
                             <br>Guiar EXPLICITAMENTE a los Constructores para guardar la versión final, final, FINAL del proyecto.
-                            <br>Quizás sugerir un nombre específico si aplica (ej. "EquipoRojo_Final").
                             <br>Asegurarse de que TODOS guarden.
-                            <br><strong>Proyectar Diapositiva 3</strong> (Icono grande de Guardar + Trofeo 🏆 + Mensaje "¡GUARDA TU VERSIÓN FINAL!").
+                            <br><strong>Proyectar Diapositiva 3</strong>.
                         </td>
                         <td>
                             "¡Ahora el guardado más importante de todos! ¡La versión FINAL!"
@@ -298,7 +294,7 @@
                      <tr>
                         <td>
                             <strong>Paso 3 (1 min): Próximos Pasos (Entrega)</strong>
-                            <br>Anunciar brevemente cómo será la "entrega" (ej. dejar tablets en lugar designado, revisión posterior por el profesor, etc., según lo planeado para S10-S12).
+                            <br>Anunciar brevemente cómo será la "entrega".
                         </td>
                         <td>
                             "¡Su aventura está lista!"
